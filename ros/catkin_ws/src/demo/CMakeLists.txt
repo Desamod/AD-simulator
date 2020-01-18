@@ -66,10 +66,10 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   duckietown_msgs
-# )
+ generate_messages(
+   DEPENDENCIES
+   duckietown_msgs
+ )
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -100,12 +100,12 @@ find_package(catkin REQUIRED COMPONENTS
 ## LIBRARIES: libraries you create in this project that dependent projects also need
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
-catkin_package(
-#  INCLUDE_DIRS include
+#catkin_package(
+# INCLUDE_DIRS include
 #  LIBRARIES lane_detector
 #  CATKIN_DEPENDS duckietown_msgs roscpp rospy
 #  DEPENDS system_lib
-)
+#)
 
 ###########
 ## Build ##
@@ -116,6 +116,7 @@ catkin_package(
 # include_directories(include)
 include_directories(
   ${catkin_INCLUDE_DIRS}
+  "../duckietown_msgs"
 )
 
 ## Declare a C++ library
